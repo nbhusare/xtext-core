@@ -78,7 +78,8 @@ public class GH1462Test extends AbstractXtextTests{
 		Root root = (Root) getModelAndExpect("#6 123 s", 1);
 		Rule6 rule6 = (Rule6) root.getElement();
 		assertEquals(123, rule6.getLeft());
-		assertNull(rule6.getRight());
+		assertNotNull(rule6.getRight());
+		assertEquals(0, rule6.getRight().getValue());
 	}
 	
 	@Test
@@ -118,7 +119,8 @@ public class GH1462Test extends AbstractXtextTests{
 		Root root = (Root) getModelAndExpect("#11 123 s", 1);
 		Rule11 rule11 = (Rule11) root.getElement();
 		assertEquals(123, rule11.getLeft());
-		assertFalse(rule11.isRight());
+		// TODO (sza, cdi): To be discussed
+		assertTrue(rule11.isRight());
 	}
 	
 }
