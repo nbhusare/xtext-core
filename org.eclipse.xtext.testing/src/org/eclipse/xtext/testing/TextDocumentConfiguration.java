@@ -12,7 +12,6 @@ import java.util.Collections;
 import java.util.Map;
 
 import org.eclipse.lsp4j.InitializeParams;
-import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 
 public class TextDocumentConfiguration {
